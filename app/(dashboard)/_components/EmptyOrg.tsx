@@ -7,7 +7,7 @@ import React from 'react'
 function EmptyOrg() {
   return (
     <div className='h-full flex flex-col items-center justify-center'>
-          <Image src="/draw.png" alt="empty" width={200} height={200} />
+          <Image src="/board.jpg" alt="empty" width={200} height={200} />
           <h2 className='text-2xl font-semibold mt-6'>Welcome to Kanvas</h2>
           <p className='text-muted-foreground text-sm mt-2'>Create an organization to get started</p>
           <div className="mt-6">
