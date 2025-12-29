@@ -15,7 +15,7 @@ interface BoardListProps {
   }
 }
 function BoardList({ orgId, query }: BoardListProps) {
-    const data = useQuery(api.boards.get, { orgId })
+    const data = useQuery(api.boards.get, { orgId,search:query.search ||"" })
     if (data===undefined) {
         return (
             <div> <h2 className="text-3xl">
@@ -56,7 +56,7 @@ function BoardList({ orgId, query }: BoardListProps) {
         <NewBoardButton orgId={orgId} />
               {data?.map((board) => (
                   <BoardCard key={board._id} id={board._id} title={board.title} imageUrl={board.imageUrl} authorId={board.authorId} authorName={board.authorName}
-                      createdAt={board._creationTime} orgId={board.orgId} isFavorite={false} />
+                      createdAt={board._creationTime} orgId={board.orgId} isFavorite={board.isFavorite} />
               ))}
           </div>
     </div>
