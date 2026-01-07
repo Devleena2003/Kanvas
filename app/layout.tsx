@@ -4,6 +4,7 @@ import "./globals.css";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import  {Toaster} from "@/components/ui/sonner"
 import { ModalProvider } from "@/providers/modal-provider";
+import { Providers } from "@/providers/liveblocks-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,7 +30,7 @@ export default function RootLayout({
       <body suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ConvexClientProvider> <Toaster/><ModalProvider/>{children}</ConvexClientProvider>
+        <ConvexClientProvider> <Providers><Toaster/><ModalProvider/>{children}</Providers></ConvexClientProvider>
 
       </body>
     </html>

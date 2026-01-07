@@ -62,7 +62,7 @@ function BoardCard({
  
 
   return (
-    <div className="group aspect-[100/127] border rounded-lg flex flex-col justify-between overflow-hidden">
+    <div className="group aspect-100/127 border rounded-lg flex flex-col justify-between overflow-hidden">
       
       {/* Clickable navigation area */}
       <Link href={`/board/${id}`} className="relative flex-1 bg-amber-50">
