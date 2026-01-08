@@ -26,10 +26,10 @@ export async function POST(request: Request) {
          room, board, boardOrgId: board?.orgId,
          userOrgId: authorization.orgId
     })
-        if (board?.orgId !== authorization.orgId) {
-            return new Response("Unauthorized")
+    //     if (board?.orgId !== authorization.orgId) {
+    //         return new Response("Unauthorized")
         
-    }
+    // }
     const userInfo = {
           name: user.firstName || "Teammate", 
         
