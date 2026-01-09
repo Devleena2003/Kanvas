@@ -113,3 +113,4 @@ export enum Side{
 }
 
 
+export type Layer=RectangleLayer|EllipseLayer|PathLayer|TextLayer|NoteLayer
