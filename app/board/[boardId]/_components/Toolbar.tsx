@@ -57,9 +57,9 @@ function Toolbar({ canvasState, setCanvasState, undo, redo,
           </div>
           <div className="bg-white rounded-md p-1.5 flex flex-col items-center shadow-md">
                <ToolButton label='Undo' icon={Undo2}
-                  onClick={() => {undo }} isDisabled={!canUndo} />
+                  onClick= {undo } isDisabled={!canUndo} />
                <ToolButton label='Redo' icon={Redo2}
-                  onClick={() => { redo}}  isDisabled={!canRedo} />
+                  onClick= { redo} isDisabled={!canRedo} />
           </div>
       
     </div>
