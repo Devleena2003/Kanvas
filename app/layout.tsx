@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
-import  {Toaster} from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner"
 import { ModalProvider } from "@/providers/modal-provider";
 import { Providers } from "@/providers/liveblocks-provider";
 const geistSans = Geist({
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ConvexClientProvider> <Providers><Toaster/><ModalProvider/>{children}</Providers></ConvexClientProvider>
+        <ConvexClientProvider> <Providers><Toaster /><ModalProvider />{children}</Providers></ConvexClientProvider>
 
       </body>
     </html>
