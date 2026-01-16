@@ -1,8 +1,10 @@
-import { useMutation, useSelf } from "@liveblocks/react"
-
+// hooks/use-delete-layers.ts
+import { useMutation, useSelf } from "@liveblocks/react";
 
 export const useDeleteLayers = () => {
-    const selection = useSelf((me) => me.presence.selection);
+    // Default to [] if selection is null
+    const selection = useSelf((me) => me.presence.selection) ?? [];
+
     return useMutation(({ storage, setMyPresence }) => {
         const liveLayers = storage.get("layers");
         const liveLayerIds = storage.get("layerIds");
@@ -14,6 +16,6 @@ export const useDeleteLayers = () => {
                 liveLayerIds.delete(index);
             }
         }
-        setMyPresence({selection:[]},{addToHistory:true})
-    },[selection])
-}
+        setMyPresence({ selection: [] }, { addToHistory: true });
+    }, [selection]);
+};
